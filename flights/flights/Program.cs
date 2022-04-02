@@ -62,13 +62,21 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
+//app.MapControllerRoute(
+//          name: "flightsAdmin",
+//    pattern: "{area}/{controller=Home}/{action=Index2}/{id?}");
+
+// pattern: "{ area: exists = Admin}/{ controller = Home}/{ action = Index}/{ id ?}");
 app.MapControllerRoute(
-          name: "FlightsAdmin",
-    pattern: "{area}/{controller=Home}/{action=Index2}/{id?}");
-   // pattern: "{ area: exists = Admin}/{ controller = Home}/{ action = Index}/{ id ?}");
+     //name: "default",
+     //pattern: "{area=flights}/{controller=flight}/{action=show}/{id?}");
+     name: "blog",
+        pattern: "{Area}/{controller}/{action}/{id?}",
+        defaults: new { Area = "flights", controller = "flight", action = "show" });
 app.MapControllerRoute(
-    name: "default",
-    pattern: "{area=Flights}/{controller=flight}/{action=show}/{id?}");
+ name: "default",
+     pattern: "{controller}/{action}/{id?}",
+        defaults: new { controller = "Admin", action = "Create" });
 app.MapRazorPages();
 
 
