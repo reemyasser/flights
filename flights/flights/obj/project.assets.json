@@ -10108,11 +10108,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\iti\\crossmobile\\asp.net\\project\\finalباذن الله\\flights\\flights\\flights.csproj",
+      "projectUniqueName": "D:\\iti\\crossmobile\\asp.net\\project\\new\\flights\\flights\\flights.csproj",
       "projectName": "flights",
-      "projectPath": "D:\\iti\\crossmobile\\asp.net\\project\\finalباذن الله\\flights\\flights\\flights.csproj",
+      "projectPath": "D:\\iti\\crossmobile\\asp.net\\project\\new\\flights\\flights\\flights.csproj",
       "packagesPath": "C:\\Users\\dream\\.nuget\\packages\\",
-      "outputPath": "D:\\iti\\crossmobile\\asp.net\\project\\finalباذن الله\\flights\\flights\\obj\\",
+      "outputPath": "D:\\iti\\crossmobile\\asp.net\\project\\new\\flights\\flights\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

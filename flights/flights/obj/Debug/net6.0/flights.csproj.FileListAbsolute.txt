@@ -831,3 +831,5 @@ D:\iti\crossmobile\asp.net\project\finalباذن الله\flights\flights\obj\De
 D:\iti\crossmobile\asp.net\project\finalباذن الله\flights\flights\obj\Debug\net6.0\flights.csproj.CopyComplete
 D:\iti\crossmobile\asp.net\project\finalباذن الله\flights\flights\obj\Debug\net6.0\flights.genruntimeconfig.cache
 D:\iti\crossmobile\asp.net\project\finalباذن الله\flights\flights\obj\Debug\net6.0\flights.csproj.AssemblyReference.cache
+D:\iti\crossmobile\asp.net\project\new\flights\flights\bin\Debug\net6.0\efpt.config.json
+D:\iti\crossmobile\asp.net\project\new\flights\flights\obj\Debug\net6.0\flights.csproj.AssemblyReference.cache
