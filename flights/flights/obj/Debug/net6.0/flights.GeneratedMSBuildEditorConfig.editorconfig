@@ -19,6 +19,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Admin/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Home/create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxjcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -229,10 +233,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/iti/crossmobile/asp.net/project/new/flights/flights/Views/Admin/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/iti/crossmobile/asp.net/project/new/flights/flights/Views/Home/Index.cshtml]
