@@ -9,9 +9,9 @@ namespace flights.Areas.Admin.Controllers
 {
   
     [Area("Admin")]
-    //[AllowAnonymous]
-   // [Authorize(Roles = "administrator")]
-    [Authorize(Policy = "RequireAdministratorRole")]
+    [AllowAnonymous]
+    // [Authorize(Roles = "administrator")]
+    //[Authorize(Policy = "RequireAdministratorRole")]
 
     public class HomeController : Controller
     {
