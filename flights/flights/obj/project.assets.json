@@ -10107,11 +10107,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER\\Desktop\\Flights2\\flights-main (1)\\flights-main\\flights\\flights\\flights.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\Desktop\\Github\\flights\\flights\\flights\\flights.csproj",
       "projectName": "flights",
-      "projectPath": "C:\\Users\\USER\\Desktop\\Flights2\\flights-main (1)\\flights-main\\flights\\flights\\flights.csproj",
+      "projectPath": "C:\\Users\\USER\\Desktop\\Github\\flights\\flights\\flights\\flights.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER\\Desktop\\Flights2\\flights-main (1)\\flights-main\\flights\\flights\\obj\\",
+      "outputPath": "C:\\Users\\USER\\Desktop\\Github\\flights\\flights\\flights\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",

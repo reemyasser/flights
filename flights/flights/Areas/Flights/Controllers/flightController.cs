@@ -4,6 +4,7 @@ using flightSystem.Services;
 using flights.Context;
 using flights.Entity;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Drawing;
 
 namespace flights.Areas.Flights.Controllers
 {
@@ -18,6 +19,21 @@ namespace flights.Areas.Flights.Controllers
         [AllowAnonymous]
         public IActionResult show()
         {
+            List<flight> flights = flightRepoService.GetAll().Where(x=>x.AvailableSeat > 0 /*&& x.DepartureTime > DateTime.Now*/).ToList();
+            flights = flights.OrderBy(x=>x.DepartureTime).ToList();
+
+            country ToCountry = countryRepoService.GetAll().Where(x => x.ID == flights[0].CountryID).FirstOrDefault();
+            ViewBag.Country1 = new { CountryImg = ToCountry.Image, flight = flights[0] };
+            
+            ToCountry = countryRepoService.GetAll().Where(x => x.ID == flights[1].CountryID).FirstOrDefault();
+            ViewBag.Country2 = new { CountryImg = ToCountry.Image, flight = flights[1] };
+
+            ToCountry = countryRepoService.GetAll().Where(x => x.ID == flights[2].CountryID).FirstOrDefault();
+            ViewBag.Country3 = new { CountryImg = ToCountry.Image, flight = flights[2] };
+
+            ToCountry = countryRepoService.GetAll().Where(x => x.ID == flights[3].CountryID).FirstOrDefault();
+            ViewBag.Country4 = new { CountryImg = ToCountry.Image, flight = flights[3] };
+
             return View();
         }
 
@@ -45,6 +61,10 @@ namespace flights.Areas.Flights.Controllers
         [HttpPost]
         public IActionResult Search(IFormCollection SearchForm)
         {
+            SelectList countries = new SelectList(countryRepoService.GetAll(), "Name", "Name");
+            ViewBag.countries = countries;
+
+
             List<flight> flights = flightRepoService.GetAll();
 
             string FromCountry = SearchForm["FromCountry"];

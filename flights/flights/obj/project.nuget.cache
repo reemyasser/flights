@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HbeYeh4quCh6d1TujbMAhf9gfH9CDy4LnBEGyj/N9ZequiWY0gXzRifq80cmG1HhRlUppnIOReeEc6678O5Bcg==",
+  "dgSpecHash": "swhB/CSAVKCEOv12l96AAYtPmBP2c/tJLpU382maLXcVRg9cxpiRzAWLtf4B6gknoRQM7LtvwP7O4hJqq6EC6A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER\\Desktop\\Flights2\\flights-main (1)\\flights-main\\flights\\flights\\flights.csproj",
+  "projectFilePath": "C:\\Users\\USER\\Desktop\\Github\\flights\\flights\\flights\\flights.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\buildbundlerminifier\\3.2.449\\buildbundlerminifier.3.2.449.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\dnsclient\\1.6.0\\dnsclient.1.6.0.nupkg.sha512",
