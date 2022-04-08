@@ -1,7 +1,7 @@
 ﻿using flights.Context;
 using flights.Entity;
 
-namespace flightSystem.Services
+namespace flights.Services
 {
     public class flightRepoService : IflightRepositary
     {
@@ -40,6 +40,7 @@ namespace flightSystem.Services
             flightUpdated.DepartureTime = flight.DepartureTime;
             flightUpdated.ArrivalTime = flight.ArrivalTime;
             flightUpdated.AvailableSeat = flight.AvailableSeat;
+            flightUpdated.Price = flight.Price;
             flightUpdated.CountryID = flight.CountryID;
             Context.SaveChanges();
         }

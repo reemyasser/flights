@@ -30,7 +30,17 @@
 		<div class="col-lg-6 col-md-6 col-sm-6 contact-w3-agile2" data-aos="flip-left">
 			<div class="contact-agileits">
 				<h4>Get In Touch</h4>
-				<form action="#" method="post">
+				 <script type="text/javascript">
+						function beforeSubmit() {
+							var FormContact = document.getElementById("FormContact");
+							var name = document.getElementById("name");
+							var phone = document.getElementById("phone");
+							var Body =  `I am ${name.value} %0D%0A My phone is ${phone.value}%0D%0A I send this mail for`
+							FormContact.action=`mailto:flightBooking@gmail.com?subject=Support Mail&body=${Body} `;
+							
+						}
+				</script>
+				<form id="FormContact" @*action="mailto:flightBooking@gmail.com?subject=Testing out mailto!&body=This is only a test!"*@ onsubmit="beforeSubmit()" method="post">
 					<div class="control-group form-group">
                         <div class="controls">
                             <label class="contact-p1">Full Name:</label> 
@@ -60,9 +70,9 @@
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-6 contact-w3-agile1" data-aos="flip-right">
 			<h4 class="w3l-contact">Connect With Us</h4>
-			<p class="contact-agile1"><strong>Phone :</strong> +1 (100)222-23-33</p>
-			<p class="contact-agile1"><strong>Email :</strong> <a href="mailto:name@example.com">info@example.com</a></p>
-			<p class="contact-agile1"><strong>Address :</strong> 132 New Lenox, 868 1st Avenue,4th United States.</p>											
+			<p class="contact-agile1"><strong>Phone :</strong> +021 365 777</p>
+			<p class="contact-agile1"><strong>Email :</strong> <a href="mailto:flightBooking@gmail.com">flightBooking@gmail.com</a></p>
+			<p class="contact-agile1"><strong>Address :</strong> 132 Naser City, Cairo.</p>											
 			
 							<ul class="agileits_social_list">
 								<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -76,9 +86,9 @@
 	</div>
 </section>
 <!-- map -->
-<div class="w3l-map">
+@*<div class="w3l-map">
 	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10446319.224363243!2d-101.53641366492933!3d40.52127641868563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1509778660321" style="border:0" allowfullscreen></iframe>
-</div>
+</div>*@
 
 <!-- //contact -->
 

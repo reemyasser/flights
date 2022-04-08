@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 namespace flights.Areas.Admin.Controllers
 {
    
-    [AllowAnonymous]
+    
 
     [Area("Admin")]
+    [Authorize(Policy = "RequireAdministratorRole")]
+
     public class AdminController : Controller
     {
         private  RoleManager<IdentityRole> roleManger;

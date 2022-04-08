@@ -22,6 +22,7 @@ namespace flights.Entity
         [Required]
         [Column(TypeName = "image")]
         public byte[] Image { get; set; }
+        public string description { get; set; }
 
         [InverseProperty(nameof(flight.Country))]
         public virtual ICollection<flight> flights { get; set; }

@@ -23,12 +23,56 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Home/create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxjcmVhdGUuY3NodG1s
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Airline/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWlybGluZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Home/DeatailsTable.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxEZWF0YWlsc1RhYmxlLmNzaHRtbA==
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Airline/DeatailsTableAirline.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWlybGluZVxEZWF0YWlsc1RhYmxlQWlybGluZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Airline/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWlybGluZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Airline/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWlybGluZVxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Airplane/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWlycGxhbmVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Airplane/DeatailsTableAirplane.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWlycGxhbmVcRGVhdGFpbHNUYWJsZUFpcnBsYW5lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Airplane/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWlycGxhbmVcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Airplane/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWlycGxhbmVcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Flights/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmxpZ2h0c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Flights/DeatailsTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmxpZ2h0c1xEZWF0YWlsc1RhYmxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Flights/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmxpZ2h0c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Flights/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmxpZ2h0c1xVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Home/create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxjcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Home/Index1.cshtml]
@@ -47,12 +91,44 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Shared/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Tickets/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGlja2V0c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Tickets/DeatailsTableTicket.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGlja2V0c1xEZWF0YWlsc1RhYmxlVGlja2V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Tickets/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGlja2V0c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/Tickets/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGlja2V0c1xVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Flights/Views/flight/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRmxpZ2h0c1xWaWV3c1xmbGlnaHRcQWJvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Flights/Views/flight/Booking.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRmxpZ2h0c1xWaWV3c1xmbGlnaHRcQm9va2luZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Flights/Views/flight/Cancel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRmxpZ2h0c1xWaWV3c1xmbGlnaHRcQ2FuY2VsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Flights/Views/flight/ConfirmBooking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRmxpZ2h0c1xWaWV3c1xmbGlnaHRcQ29uZmlybUJvb2tpbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Flights/Views/flight/Contact.cshtml]
@@ -63,8 +139,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRmxpZ2h0c1xWaWV3c1xmbGlnaHRcR2FsbGVyeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Flights/Views/flight/Info.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRmxpZ2h0c1xWaWV3c1xmbGlnaHRcSW5mby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Flights/Views/flight/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRmxpZ2h0c1xWaWV3c1xmbGlnaHRcU2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Flights/Views/flight/show.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRmxpZ2h0c1xWaWV3c1xmbGlnaHRcc2hvdy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Flights/Views/flight/Ticket.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRmxpZ2h0c1xWaWV3c1xmbGlnaHRcVGlja2V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Flights/Views/Shared/_LayoutFlight.cshtml]
@@ -233,6 +321,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/iti/crossmobile/asp.net/project/new/flights/flights/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Views/Error/ErrorNotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcRXJyb3JOb3RGb3VuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/iti/crossmobile/asp.net/project/new/flights/flights/Views/Error/ErrorNotHandle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcRXJyb3JOb3RIYW5kbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/iti/crossmobile/asp.net/project/new/flights/flights/Views/Home/Index.cshtml]

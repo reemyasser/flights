@@ -64,6 +64,10 @@
       {
          "Name": "[dbo].[tickets]",
          "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[visitors]",
+         "ObjectType": 0
       }
    ],
    "UiHint": "REEM.FlightSystemDB",

@@ -105,6 +105,7 @@ namespace flights.Areas.Identity.Pages.Account
 
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 var resrole = await _userManager.AddToRoleAsync(user, "user");
+              
 
                 if (result.Succeeded)
                 {
