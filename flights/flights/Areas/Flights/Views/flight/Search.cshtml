@@ -5,32 +5,9 @@
 
 @using flights.Entity;
 @section files{
-          <link rel="icon" href="~/images/fevicon.png" type="image/png" />
-      <!-- bootstrap css -->
-    @*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />*@
-    @*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/fontawesome.min.css" integrity="sha512-KVdV5HNnN1f6YOANbRuNxyCnqyPICKUmQusEkyeRg4X0p8K1xCdbHs32aA7pWo6WqMZk0wAzl29cItZh8oBPYQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />*@
-      <!-- bootstrap css -->
-      <link rel="stylesheet" href="~/css/bootstrap.min.css" />
-      <!-- site css -->
-      <link rel="stylesheet" href="~/css/style.css" />
-      <!-- responsive css -->
-      <link rel="stylesheet" href="~/css/responsive.css" />
-      <!-- color css -->
-      <link rel="stylesheet" href="~/css/colors.css" />
-      <!-- select bootstrap -->
-      <link rel="stylesheet" href="~/css/bootstrap-select.css" />
-      <!-- scrollbar css -->
-      <link rel="stylesheet" href="~/css/perfect-scrollbar.css" />
-      <!-- custom css -->
-      <link rel="stylesheet" href="~/css/custom.css" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" />
-      <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css" />
-       <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/flights.styles.css" asp-append-version="true" />
-
 }
 
+<div class="container">
     <div class="midde_cont">
         <div class="container-fluid">
             <div class="row column_title">
@@ -39,24 +16,28 @@
                             
                        <form id="SearchForm" asp-route-returnUrl="~/Flights/Flight/Search" method="post">
                        
-                        <div style="display: flex;width:50%; margin-left:20%;margin-right:20%;">
+                        <br />
+                        <br />
+                        <div style="display: flex;width:60%; margin-left:20%;margin-right:20%;">
                             <label style="margin-right:10px">From </label>
                             <select name="FromCountry" class="form-control" asp-items=@ViewBag.countries>
                                 <option hidden selected></option>    
                             </select>
-                            <label style=" margin-left:100px; margin-right:10px">To </label>
-                            <select name="ToCountry" class="form-control" asp-items=@ViewBag.countries form="SearchForm"> 
+                            <label style=" margin-left:20%; margin-right:10px">To </label>
+                            <select name="ToCountry" class="form-control" asp-items=@ViewBag.countries form="SearchForm" style="margin-right:10%"> 
                                 <option hidden selected></option>    
                             </select>
                         </div>
                         <br />
-                        <div style="display: flex;width:50%; margin-left:20%;margin-right:20%;">
+                        <br />
+                        <div style="display: flex;width:60%; margin-left:15%;margin-right:20%;">
                             <label style="margin-right:10px">DepartureTime </label>
-                            <input type="date" id="DepartureTime" name="DepartureTime">
+                            <input type="date" id="DepartureTime" name="DepartureTime" style="width:400px">
 
                             <label style=" margin-left:100px; margin-right:10px">ArrivalTime </label>
-                            <input type="date" id="ArrivalTime" name="ArrivalTime">
+                            <input type="date" id="ArrivalTime" name="ArrivalTime" style="width:400px">
                         </div>
+                        <br />
                         <br />
                         <br />
                         <div style="display: flex;width:50%; margin-left:20%;margin-right:20%;">
@@ -64,7 +45,6 @@
                         <label> AvailableSeat</label><br>
                         </div>
 
-                        <br />
                         <div style="margin-left:80%;margin-right:0%;" >
                             <input id="SearchButton" style="background:rgb(237, 28, 36);border-color:rgb(237, 28, 36)" type="submit" class=" btn-lg btn-primary" value="Search"/>
                         @*<button id="SearchButton" style="background:rgb(237, 28, 36);border-color:rgb(237, 28, 36)" type="submit" class=" btn-lg btn-primary">Search</button>*@
@@ -96,7 +76,10 @@
                 <th>Departure Time</th>
                 <th>Arrival Time</th>
                 <th>AvailableSeat</th>
+                <th>Price</th>
+
                 <th>Booking</th>
+
             </tr>
         </thead>
         
@@ -115,6 +98,7 @@
                             <td>@trips[i].DepartureTime</td>
                             <td>@trips[i].ArrivalTime</td>
                             <td>@trips[i].AvailableSeat</td>
+                            <td>@trips[i].Price</td>
                             <td>
                             @{
                                 if (@trips[i].AvailableSeat > 0)
@@ -140,4 +124,5 @@
             <!-- end row -->
         </div>
     </div>
+</div>
     <!-- end dashboard inner -->

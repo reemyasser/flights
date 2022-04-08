@@ -1,7 +1,7 @@
 ﻿using flights.Context;
 using flights.Entity;
 
-namespace flightSystem.Services
+namespace flights.Services
 {
     public class TicketRepoService : ITicketRepositary
     {
@@ -35,10 +35,13 @@ namespace flightSystem.Services
         public void UpdateTicket(int id, ticket ticket)
         {
             ticket ticketUpdated = Context.tickets.Find(id);
-            ticketUpdated.seatNum = ticket.seatNum;
+            ticketUpdated.NoOfSeats = ticket.NoOfSeats;
             ticketUpdated.CheckStatus = ticket.CheckStatus;
             ticketUpdated.UserID = ticket.UserID;
             ticketUpdated.FlightNumber = ticket.FlightNumber;
+           
+
+            Context.SaveChanges();
         }
     }
 }

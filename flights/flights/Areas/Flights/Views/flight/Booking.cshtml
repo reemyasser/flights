@@ -1,6 +1,10 @@
 ﻿@{
 	Layout = "~/Areas/Flights/Views/Shared/_LayoutFlight.cshtml";
 }
+@{
+ViewData["Title"] = "Booking";
+}
+@model IEnumerable<flights.Entity.flight>
 @section files{
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>	
@@ -21,6 +25,9 @@
 	<link rel="stylesheet" href="~/cssflight/jquery-ui.css" />
 	<link href="~/cssflight/bookingstyle.css" rel="stylesheet" type="text/css" media="all"/>
 }
+<div class="banner1">
+	
+</div>
 <!-- main-section -->
 	<div class="head agile">
 	<div class="wthree_head_section">
@@ -33,122 +40,61 @@
 					</ul>*@				  	 
 							<div class="login-top agileinfo">
 								
-								<form action="#" method="post">
-									<div class="w3_agileits_main_grid w3l_main_grid">
-										<div class="agileits_grid">
-											<h5>Name * </h5>
-											<div class="name">
-												<input type="text" name="First name" placeholder="Your Name" required="">
-											</div>
-											<div class="clear"></div>
-										</div>
-									</div>
-									<div class="w3_agileits_main_grid w3l_main_grid">
-										<div class="agileits_grid">
-											<h5>E-mail </h5>
-												<input type="email" name="Email" placeholder="ex : yourmail@gmail.com" required="">
-										</div>
-									</div>
+								
+								<form action="ConfirmBooking" method="post">
+                                  <div class="form-row">
+                                  <div class="form-group col-md-6">
+								        <label for="from">From*</label>
+												<select id="from" name="from" required="" class="form-control">
+													@foreach (var item in Model) {
+                                                       <option>
+                                                      @Html.DisplayFor(modelItem => item.From)
+													  </option>
+													}
+												</select>
+								  </div>
+										
+								<div class="form-group col-md-6">
+									 <label for="to">To*</label>
+										<select id="to" name="to" required="" class="form-control">
+														@foreach (var item in Model) {
+														   <option>
+														  @Html.DisplayFor(modelItem => item.To)
+														  </option>
+														}
+										</select>
+								</div>
+										
+								<div class="form-group col-md-4">
+											<label for="DepartureTime">DepartureTime*</label>
+											
+											 <input type="date" id="DepartureTime" name="DepartureTime" class="form-control">
+											
+								</div>	
+										
+								<div class="form-group col-md-4">
+										    <label for="ArrivalTime">ArrivalTime*</label>
+											
+											 <input type="date" id="ArrivalTime" name="ArrivalTime" class="form-control">
+											
+								</div>
+							   <div class="form-group col-md-4">
+								    <label for="NoOfSeats">Number Of Seats*</label>
+											
+									<input type="number" id="NoOfSeats" name="NoOfSeats" class="form-control" />
+											
+								</div>
+										
+															
 									
-									<div class="fromtop">
-										<div class="agileinfo_main_grid held">
-											<div class="agileits_w3layouts_grid">
-												<h5>From*</h5>
-												<select id="category1" name="category1" required="">
-													<option value="category1">Australia</option>
-													<option value="category2">Singapore</option>
-													<option value="category3">America</option>
-													<option value="category3">London</option>
-													<option value="category3">Goa</option>
-													<option value="category3">Canada</option>
-													<option value="category3">Srilanka</option>
-												</select>
-											</div>
-										</div>
+								<div class="clearfix"></div>
+								<div class="aitssubmitw3ls">
+								<button style="margin-left:12px;background:rgb(237, 28, 36);border-color:rgb(237, 28, 36);font-size:20px;width:80px;color:white"class=" btn-lg btn-primary">Book</button>
+								</div>
+									</div>		
 										
-										<div class="agileinfo_main_grid">
-											<div class="agileits_w3layouts_grid">
-												<h5>To*</h5>
-												<select id="category1" name="category1" required="">
-													<option value="category2">Singapore</option>
-													<option value="category1">Australia</option>
-													<option value="category3">America</option>
-													<option value="category3">London</option>
-													<option value="category3">Goa</option>
-													<option value="category3">Canada</option>
-													<option value="category3">Srilanka</option>
-												</select>
-											</div>
-										</div>
-										<div class="clearfix"></div>
-									</div>
-									
-										<div class="agileits_main_grid w3_agileits_main_grid held">
-											<div class="wthree_grid">
-												<h5>Adults*</h5>
-												<select id="category1" name="category1" required="">
-													<option value="category1">01</option>
-													<option value="category2">02</option>
-													<option value="category3">03</option>
-													<option value="category4">04</option>
-													<option value="category2">05</option>
-													<option value="category3">06</option>
-												</select>
-											</div>
-										</div>
-										
-										<div class="agileinfo_main_grid">
-											<div class="agileits_w3layouts_grid">
-												<h5>Children*</h5>
-												<select id="category1" name="category1" required="">
-													<option value="category1">01</option>
-													<option value="category2">02</option>
-													<option value="category3">03</option>
-													<option value="category4">04</option>
-													<option value="category2">05</option>
-													<option value="category3">06</option>
-												</select>
-											</div>
-										</div>
-										<div class="clearfix"></div>
-										
-										<div class="agileinfo_main_grid1">
-											<div class="agileits_w3layouts_grid mim">
-												<h5>Travel Class*</h5>
-												<select id="category2" name="category1" required="">
-													<option value="category1">Economy class</option>
-													<option value="category2">Premium Economy</option>
-													<option value="category3">Business class</option>
-													<option value="category3">First Class</option>
-												</select>
-											</div>
-										</div>
-										
-										<div class="agileits_w3layouts_main_grid w3ls_main_grid agileinfo_main_grid held">
-											<div class="agileinfo_grid">
-											<h5>Departure On*</h5>
-												
-												<div class="agileits_w3layouts_main_grid1">
-													<input class="date" id="datepicker" name="Text" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '08/13/2016';}" required="">
-												</div>
-												<div class="clearfix"></div>
-											</div>
-										</div>
-										
-										<div class="agileinfo_main_grid">
-											<div class="agileits_w3layouts_grid">
-												<h5>Journey type*</h5>
-												<select id="category1" name="category1" required="">
-													<option value="category1">One Way</option>
-													<option value="category2">Round trip</option>
-												</select>
-											</div>
-										</div>
-										<div class="clearfix"></div>
-											<div class="aitssubmitw3ls">
-												<input type="submit" name="submit" value="Book">
-											</div>
 								</form>
+								
 							</div>
 				</div>
 		</div>	
@@ -184,6 +130,7 @@
 	</script>
 	<!-- //here ends scrolling script -->
 <!-- //here ends scrolling icon -->
+                                  
 
 <!-- scrolling script -->
 <script type="text/javascript">

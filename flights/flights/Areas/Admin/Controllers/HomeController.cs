@@ -1,5 +1,7 @@
 ﻿using flights.Areas.Identity.Data;
 using flights.Areas.Identity.Pages.Account;
+using flights.Context;
+using flights.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -9,16 +11,26 @@ namespace flights.Areas.Admin.Controllers
 {
   
     [Area("Admin")]
-    [AllowAnonymous]
-    // [Authorize(Roles = "administrator")]
-    //[Authorize(Policy = "RequireAdministratorRole")]
+   //[AllowAnonymous]
+   // [Authorize(Roles = "administrator")]
+   [Authorize(Policy = "RequireAdministratorRole")]
 
     public class HomeController : Controller
     {
         flightsContext context;
-        private readonly UserManager<flightsUser> _userManager;
-        public InputModel Input { get; set; }
+        FlightsystemdbContext contextflight = new FlightsystemdbContext();
 
+        private readonly UserManager<flightsUser> _userManager;
+        public IflightRepositary flightRepositary { get; set; }
+        public ITicketRepositary ticketRepositary { get; set; }
+        public IAirlineRepositary airlineRepositary { get; set; }
+        public IairplaneRepositary airplaneRepositary { get; set; }
+        public IcountryRepositary icountryRepositary { get; set; }
+
+        public IUserRepositary userRepositary { get; set; }
+
+
+        public InputModel Input { get; set; }
         public class InputModel
         {
             [Required]
@@ -54,21 +66,40 @@ namespace flights.Areas.Admin.Controllers
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
         }
-        public HomeController(flightsContext context, UserManager<flightsUser> userManager) { 
+        public HomeController(flightsContext context, 
+            UserManager<flightsUser> userManager,
+            IflightRepositary flightRepositary,
+            ITicketRepositary ticketRepositary,
+            IAirlineRepositary airlineRepositary,
+            IairplaneRepositary airplaneRepositary,
+            IUserRepositary userRepositary,
+            IcountryRepositary icountryRepositary
+
+
+            ) { 
         
         this.context=context;
             this._userManager = userManager;
+
+            this.flightRepositary = flightRepositary;
+            this.ticketRepositary = ticketRepositary;
+            this.airlineRepositary = airlineRepositary;
+            this.airplaneRepositary = airplaneRepositary;
+            this.userRepositary = userRepositary;
+            this.icountryRepositary = icountryRepositary;
         }
 
         [HttpGet]
         public IActionResult Index2()
         {
-            return View();
+            ViewBag.count= contextflight.visitors.Count();
+            ViewBag.flightscount = flightRepositary.GetAll().Count;
+            ViewBag.usercount = userRepositary.GetAll().Count;
+
+
+            return View(icountryRepositary.GetAll());
         }
-        public IActionResult tables()
-        {
-            return View();
-        }
+      
         public IActionResult create()
         {
       
@@ -102,8 +133,8 @@ namespace flights.Areas.Admin.Controllers
                     var result = await _userManager.CreateAsync(newuAdmin, flightsUser.Password);
                     var resrole = await _userManager.AddToRoleAsync(newuAdmin, "administrator");
 
-                    context.Add(newuAdmin);
-                    context.SaveChanges();
+                    //context.Add(newuAdmin);
+                    //context.SaveChanges();
                     return RedirectToAction("index2");
                 }
                 else {
@@ -114,9 +145,21 @@ namespace flights.Areas.Admin.Controllers
             }
             return View();
         }
-        public IActionResult DeatailsTable()
+        public IActionResult tables()
         {
+          ViewBag.countflight=  flightRepositary.GetAll().Count();
+            ViewBag.countticket = ticketRepositary.GetAll().Count();
+            ViewBag.countairplane = airplaneRepositary.GetAll().Count();
+            ViewBag.countairline = airlineRepositary.GetAll().Count();
+
+
             return View();
         }
+    
+      
+       
+        
+
+
     }
 }

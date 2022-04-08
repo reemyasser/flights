@@ -27,6 +27,7 @@ namespace flights.Entity
         public DateTime ArrivalTime { get; set; }
         public int AvailableSeat { get; set; }
         public int CountryID { get; set; }
+        public int Price { get; set; }
 
         [ForeignKey(nameof(CountryID))]
         [InverseProperty(nameof(country.flights))]

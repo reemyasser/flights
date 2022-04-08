@@ -31,6 +31,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
 <!-- //googlefonts -->
+
+
+
 @RenderSection("files",required:false)
 </head>
 <body>
@@ -90,7 +93,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 														</ul>
 													</li>*@
 													<li class="nav-item"><a href="~/Flights/flight/Search">Search</a></li>
-													<li class="nav-item"><a href="~/Flights/flight/Offers">Offers</a></li>
+													@*<li class="nav-item"><a href="~/Flights/flight/Offers">Offers</a></li>*@
 													<li class="nav-item"><a href="~/Flights/flight/Contact">Contact</a></li>
 													
 												@Html.Partial("~/Views/Shared/_LoginPartial.cshtml")
@@ -153,19 +156,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="clearfix"> </div>
 			<div class="w3_agileits_footer_grids">
-				<div class="col-md-12 wthree_footer_grid_right">
+@*				<div class="col-md-12 wthree_footer_grid_right">
 					<h3>Sign up for our Newsletter</h3>
 					<form action="#" method="post">
 						<input type="email" name="Email" placeholder="Enter your email..." required="">
 						<input type="submit" value="Submit">
 					</form>
-				</div>
+				</div>*@
 				<div class="clearfix"> </div>
 			</div>
 		</div>
 	</div>
 	<div class="agileinfo_copyright">
-		<p>© 2018 Travel Agency. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+		<p>© 2022 Travel Agency. <a href="~/Flights/flight/show">FLights</a></p>
 	</div>
 <!-- //footer -->
 

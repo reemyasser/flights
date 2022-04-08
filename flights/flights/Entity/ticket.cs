@@ -14,12 +14,12 @@ namespace flights.Entity
     {
         [Key]
         public int Id { get; set; }
-        public int seatNum { get; set; }
+        public int NoOfSeats { get; set; }
         [Required]
         public string CheckStatus { get; set; }
+        [Required]
         public string UserID { get; set; }
         public int FlightNumber { get; set; }
-        public int Price { get; set; }
 
         [ForeignKey(nameof(FlightNumber))]
         [InverseProperty(nameof(flight.tickets))]

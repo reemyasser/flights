@@ -2,7 +2,7 @@
 	Layout = "~/Areas/Flights/Views/Shared/_LayoutFlight.cshtml";
 
 }
-
+@using flights.Entity
 @section files{
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>	
@@ -29,111 +29,37 @@
 				<p>A travel agency is a private retailer or public service that provides travel and tourism related services to the public on behalf of suppliers such as activities.</p>
 			</div>
 			<div class="w3ls_gallery_grids">
-				<div class="col-md-4 w3_agile_gallery_grid">
-					<div class="agile_gallery_grid">
-						<a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="~/imageflight/g1.jpg">
-							<div class="agile_gallery_grid1">
-								<img src="~/imageflight/g1.jpg" alt=" " class="img-responsive" />
-								<div class="w3layouts_gallery_grid1_pos">
-									<h3>Travel</h3>
-									<p> Transport</p>
+					
+				@{
+					List<country> countries = ViewBag.countries;
+
+					for(int i = 0;i<countries.Count;i++)
+					{
+							<div class="col-md-4 w3_agile_gallery_grid">
+							@{int j = i;}
+						  	@for(; i < countries.Count && (j+(countries.Count/3) > i) ; i++)
+							{
+								<div class="agile_gallery_grid">
+									<a title=@countries[i].Name 
+									href="data:image/bmp;base64, @(Convert.ToBase64String(@countries[i].Image))" >
+										<div class="agile_gallery_grid1">
+											<img src="data:image/bmp;base64, @(Convert.ToBase64String(@countries[i].Image))" 
+												alt="" width = "200" height="240"/>
+											<div class="w3layouts_gallery_grid1_pos">
+												<h3>@countries[i].Name</h3>
+											</div>
+										</div>
+									</a>
 								</div>
+							}
+							@{
+								if (i < countries.Count )
+									i--;
+							}
 							</div>
-						</a>
-					</div>
-					<div class="agile_gallery_grid">
-						<a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="~/imageflight/g2.jpg">
-							<div class="agile_gallery_grid1">
-								<img src="~/imageflight/g2.jpg" alt=" " class="img-responsive" />
-								<div class="w3layouts_gallery_grid1_pos">
-									<h3>Travel</h3>
-									<p> Transport</p>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="agile_gallery_grid">
-						<a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="~/imageflight/g3.jpg">
-							<div class="agile_gallery_grid1">
-								<img src="~/imageflight/g3.jpg" alt=" " class="img-responsive" />
-								<div class="w3layouts_gallery_grid1_pos">
-									<h3>Travel</h3>
-									<p> Transport</p>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-4 w3_agile_gallery_grid">
-					<div class="agile_gallery_grid">
-						<a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="~/imageflight/g10.jpg">
-							<div class="agile_gallery_grid1">
-								<img src="~/imageflight/g10.jpg" alt=" " class="img-responsive" />
-								<div class="w3layouts_gallery_grid1_pos">
-									<h3>Travel</h3>
-									<p> Transport</p>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="agile_gallery_grid">
-						<a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="~/imageflight/g12.jpg">
-							<div class="agile_gallery_grid1">
-								<img src="~/imageflight/g12.jpg" alt=" " class="img-responsive" />
-								<div class="w3layouts_gallery_grid1_pos">
-									<h3>Travel</h3>
-									<p> Transport</p>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="agile_gallery_grid">
-						<a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="~/imageflight/g6.jpg">
-							<div class="agile_gallery_grid1">
-								<img src="~/imageflight/g6.jpg" alt=" " class="img-responsive" />
-								<div class="w3layouts_gallery_grid1_pos">
-									<h3>Travel</h3>
-									<p> Transport</p>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-4 w3_agile_gallery_grid">
-					<div class="agile_gallery_grid">
-						<a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="~/imageflight/g7.jpg">
-							<div class="agile_gallery_grid1">
-								<img src="~/imageflight/g7.jpg" alt=" " class="img-responsive" />
-								<div class="w3layouts_gallery_grid1_pos">
-									<h3>Travel</h3>
-									<p> Transport</p>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="agile_gallery_grid">
-						<a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="~/imageflight/g8.jpg">
-							<div class="agile_gallery_grid1">
-								<img src="~/imageflight/g8.jpg" alt=" " class="img-responsive" />
-								<div class="w3layouts_gallery_grid1_pos">
-									<h3>Travel</h3>
-									<p> Transport</p>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="agile_gallery_grid">
-						<a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="~/imageflight/g9.jpg">
-							<div class="agile_gallery_grid1">
-								<img src="~/imageflight/g9.jpg" alt=" " class="img-responsive" />
-								<div class="w3layouts_gallery_grid1_pos">
-									<h3>Travel</h3>
-									<p> Transport</p>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
+						}
+					
+				}
 				<div class="clearfix"></div>
 			</div>
 		</div>

@@ -32,6 +32,7 @@ namespace flights.Context
         public virtual DbSet<country> countries { get; set; }
         public virtual DbSet<flight> flights { get; set; }
         public virtual DbSet<ticket> tickets { get; set; }
+        public virtual DbSet<visitor> visitors { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -79,12 +80,17 @@ namespace flights.Context
                     .HasConstraintName("FK_airplanes_flights_FlightNumber1");
             });
 
+            modelBuilder.Entity<flight>(entity =>
+            {
+                entity.HasOne(d => d.Country)
+                    .WithMany(p => p.flights)
+                    .HasForeignKey(d => d.CountryID)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_flights_countries");
+            });
+
             modelBuilder.Entity<ticket>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
-                entity.Property(e => e.seatNum).ValueGeneratedOnAdd();
-
                 entity.HasOne(d => d.FlightNumberNavigation)
                     .WithMany(p => p.tickets)
                     .HasForeignKey(d => d.FlightNumber)
@@ -93,6 +99,7 @@ namespace flights.Context
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.tickets)
                     .HasForeignKey(d => d.UserID)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tickets_AspNetUsers");
             });
 

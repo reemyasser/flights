@@ -1,7 +1,7 @@
 ﻿using flights.Context;
 using flights.Entity;
 
-namespace flightSystem.Services
+namespace flights.Services
 {
     public class countryRepoService : IcountryRepositary
     {

@@ -12,6 +12,8 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using System.Security.Claims;
+using flights.Context;
 
 namespace flights.Areas.Identity.Pages.Account
 {
@@ -90,12 +92,18 @@ namespace flights.Areas.Identity.Pages.Account
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
-                    if (User.IsInRole("user"))
+                    FlightsystemdbContext context = new FlightsystemdbContext();
+                   var usercheck= context.AspNetUsers.Where(w => w.Email == Input.Email).FirstOrDefault().Id;
+                    var roleid = context.AspNetUserRoles.Where(w => w.UserId == usercheck).FirstOrDefault().RoleId;
+
+                    var rolename = context.AspNetRoles.Where(w => w.Id == roleid).FirstOrDefault().Name;
+
+                    if (rolename=="user")
                     {
                         _logger.LogInformation("User logged in.");
                         return LocalRedirect(returnUrl);
                     }
-                    else {
+                    else if (User.IsInRole("administrator")) {
                         _logger.LogInformation("User logged in.");
                         return RedirectToAction("Index2", "Home", new { Area="Admin"});
                     }
